@@ -1,0 +1,71 @@
+.popup {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    margin: 0 auto;
+    width: 40vw;
+    height: 10vh;
+    z-index: 10;
+}
+
+.popup--glide {
+    display: block;
+    top: calc(0% - -4vh);
+    animation-name: glide;
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes glide {
+    0% {
+        top: calc(0% - 10vh);
+    }
+    100% {
+        top: calc(0% - -4vh);
+    }
+}
+
+.popup--flash {
+    display: block;
+    top: calc(0% - -4vh);
+    animation-name: flash;
+    animation-duration: .3s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.popup--turn {
+    display: block;
+    top: calc(0% - -4vh);
+    animation-name: turn;
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes turn {
+    0% {
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+}
