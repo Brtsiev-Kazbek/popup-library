@@ -1,7 +1,7 @@
 class Popup {
-    constructor(element) {
+    constructor(element, style='popup') {
         this.element = element;
-        this.element.classList.add('popup');
+        this.element.classList.add(style);
         this.animations = {
             glide: 'popup--glide',
             flash: 'popup--flash',
@@ -22,5 +22,9 @@ class Popup {
         setTimeout(() => {
             this.element.classList.remove(this.animations[name]);
         }, time * 1000);
+    }
+
+    createAnimation(animationName, animationStyle) {
+        this.animations[animationName] = animationStyle;
     }
 }
