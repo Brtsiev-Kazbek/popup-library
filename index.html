@@ -48,15 +48,18 @@
         let div = document.querySelector('.alert');
         let popup = new Popup(div);
 
-        glide.addEventListener('click', () => {
+        glide.addEventListener('click', (e) => {
+            e.preventDefault();
             popup.timeShow('glide', 4);
         });
 
-        flash.addEventListener('click', () => {
+        flash.addEventListener('click', (e) => {
+            e.preventDefault();
             popup.timeShow('flash', 4);
         });
 
-        turn.addEventListener('click', () => {
+        turn.addEventListener('click', (e) => {
+            e.preventDefault();
             popup.timeShow('turn', 4);
             
         });
