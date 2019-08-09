@@ -31,7 +31,7 @@
     display: block;
     top: calc(0% - -4vh);
     animation-name: flash;
-    animation-duration: .6s;
+    animation-duration: .8s;
     animation-timing-function: ease-in-out;
 }
 

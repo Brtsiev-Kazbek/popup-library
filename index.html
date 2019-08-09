@@ -12,9 +12,9 @@
 <body>
 
     <div class="btns">
-        <a href="#" class="btn glide">Glide</a>
-        <a href="#" class="btn flash">Flash</a>
-        <a href="#" class="btn turn">Turn</a>
+        <div class="btn-wrap"><a href="#" class="btn glide">Glide</a></div>
+        <div class="btn-wrap"><a href="#" class="btn flash">Flash</a></div>
+        <div class="btn-wrap"><a href="#" class="btn turn">Turn</a></div>
     </div>
 
 
@@ -38,7 +38,7 @@
 
 
     <footer>
-        <a href="https://github.com/Brtsiev-Kazbek/popup-library">on GitHub</a>
+        <div class="btn-wrap"><a href="https://github.com/Brtsiev-Kazbek/popup-library">on GitHub</a></div>
     </footer>
     <script src="popup.js"></script>
     <script>
@@ -86,7 +86,7 @@
             transition: .3s;
         }
         
-        a:hover {
+        .btn-wrap:hover a {
             background: #2EE59D;
             box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
             color: white;
@@ -96,6 +96,12 @@
         .btns {
             margin-top: calc(50vh - 45px);
             text-align: center;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            justify-content: center;
         }
         
         .alert__inner {
