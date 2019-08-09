@@ -38,7 +38,7 @@
 
 
     <footer>
-        <div class="btn-wrap"><a href="https://github.com/Brtsiev-Kazbek/popup-library">on GitHub</a></div>
+        <div class="btn-github"><a href="https://github.com/Brtsiev-Kazbek/popup-library">on GitHub</a></div>
     </footer>
     <script src="popup.js"></script>
     <script>
@@ -48,18 +48,15 @@
         let div = document.querySelector('.alert');
         let popup = new Popup(div);
 
-        glide.addEventListener('click', (e) => {
-            e.preventDefault();
+        glide.addEventListener('click', () => {
             popup.timeShow('glide', 4);
         });
 
-        flash.addEventListener('click', (e) => {
-            e.preventDefault();
+        flash.addEventListener('click', () => {
             popup.timeShow('flash', 4);
         });
 
-        turn.addEventListener('click', (e) => {
-            e.preventDefault();
+        turn.addEventListener('click', () => {
             popup.timeShow('turn', 4);
             
         });
@@ -95,6 +92,12 @@
             box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
             color: white;
             transform: translateY(-3px);
+        }
+        .btn-github:hover a {
+            background: #2EE59D;
+            box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+            color: white;
+            transform: translateY(-7px);
         }
         
         .btns {
