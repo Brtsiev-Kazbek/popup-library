@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="popup.css">
+    <title>PopUp-library</title>
+</head>
+
+<body>
+
+    <div class="btns">
+        <a href="#" class="btn glide">Glide</a>
+        <a href="#" class="btn flash">Flash</a>
+        <a href="#" class="btn turn">Turn</a>
+    </div>
+
+
+    <div class="alert">
+        <div class="alert__inner">
+            <div id=container>
+                <div id=flip>
+                    <div>
+                        <div>PopUp - library</div>
+                    </div>
+                    <div>
+                        <div>PopUp - library</div>
+                    </div>
+                    <div>
+                        <div>PopUp - library</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <a href="https://github.com/Brtsiev-Kazbek/popup-library">on GitHub</a>
+    </footer>
+    <script src="popup.js"></script>
+    <script>
+        let glide = document.querySelector('.glide');
+        let flash = document.querySelector('.flash');
+        let turn = document.querySelector('.turn');
+        let div = document.querySelector('.alert');
+        let popup = new Popup(div);
+
+        glide.addEventListener('click', () => {
+            popup.timeShow('glide', 4);
+        });
+
+        flash.addEventListener('click', () => {
+            popup.timeShow('flash', 4);
+        });
+
+        turn.addEventListener('click', () => {
+            popup.timeShow('turn', 4);
+        });
+    </script>
+    <style>
+        body {
+            background-color: rgb(247, 247, 247);
+        }
+        
+        a {
+            text-decoration: none;
+            outline: none;
+            display: inline-block;
+            width: 140px;
+            height: 45px;
+            line-height: 45px;
+            border-radius: 45px;
+            margin: 10px 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 3px;
+            font-weight: 600;
+            color: #524f4e;
+            background: white;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, .2);
+            transition: .3s;
+        }
+        
+        a:hover {
+            background: #2EE59D;
+            box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+            color: white;
+            transform: translateY(-7px);
+        }
+        
+        .btns {
+            margin-top: calc(50vh - 45px);
+            text-align: center;
+        }
+        
+        .alert__inner {
+            background-color: #fff;
+            width: 100%;
+            height: 100%;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, .2);
+            border-radius: 45px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        footer {
+            position: fixed;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        footer a {
+            background-color: #000;
+            color: #fff;
+        }
+        
+        @import url('https://fonts.googleapis.com/css?family=Roboto:700');
+        body {
+            margin: 0px;
+            font-family: 'Roboto';
+            text-align: center;
+        }
+        
+        #container {
+            color: #999;
+            text-transform: uppercase;
+            font-size: 26px;
+            font-weight: bold;
+            width: 100%;
+            bottom: 45%;
+            display: block;
+        }
+        
+        #flip {
+            height: 36px;
+            overflow: hidden;
+        }
+        
+        #flip>div>div {
+            color: #fff;
+            padding: 4px 12px;
+            height: 45px;
+            margin-bottom: 45px;
+            display: inline-block;
+        }
+        
+        #flip div:first-child {
+            animation: show 5s linear infinite;
+        }
+        
+        #flip div div {
+            background: #42c58a;
+        }
+        
+        #flip div:first-child div {
+            background: #4ec7f3;
+        }
+        
+        #flip div:last-child div {
+            background: #DC143C;
+        }
+        
+        @keyframes show {
+            0% {
+                margin-top: -270px;
+            }
+            5% {
+                margin-top: -180px;
+            }
+            33% {
+                margin-top: -180px;
+            }
+            38% {
+                margin-top: -90px;
+            }
+            66% {
+                margin-top: -90px;
+            }
+            71% {
+                margin-top: 0px;
+            }
+            99.99% {
+                margin-top: 0px;
+            }
+            100% {
+                margin-top: -270px;
+            }
+        }
+        
+        p {
+            position: fixed;
+            width: 100%;
+            bottom: 30px;
+            font-size: 12px;
+            color: #999;
+            margin-top: 200px;
+        }
+    </style>
+</body>
+
+</html>
