@@ -9,22 +9,22 @@ class Popup {
         };
     }
 
-    show(name) {
+    show = (name) => {
         this.element.classList.add(this.animations[name]);
     }
 
-    hide(name) {
+    hide = (name) => {
         this.element.classList.remove(this.animations[name]);
     }
 
-    timeShow(name, time) {
-        this.element.classList.add(this.animations[name]);
+    timeShow = (name, time) => {
+        this.show(name)
         setTimeout(() => {
-            this.element.classList.remove(this.animations[name]);
+            this.hide(name, time);
         }, time * 1000);
     }
 
-    createAnimation(animationName, animationStyle) {
+    createAnimation = (animationName, animationStyle) => {
         this.animations[animationName] = animationStyle;
     }
 }

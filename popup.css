@@ -10,6 +10,26 @@
     z-index: 10;
 }
 
+@media screen and (max-width: 1400px) {
+	.popup {
+		width: 50vw;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.popup {
+		width: 60vw;
+	}
+}
+
+@media screen and (max-width: 620px) {
+	.popup {
+		width: 80vw;
+	}
+}
+
+
+
 .popup--glide {
     display: block;
     top: calc(0% - -4vh);
